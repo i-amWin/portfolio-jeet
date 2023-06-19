@@ -15,9 +15,9 @@ export default function Input({ type = "text", name, labelText }: InputProps) {
           appearance-none
         "
         type={type}
-        id={name}
+        id={name + "-input"}
         name={name}
-        placeholder=""
+        placeholder=" "
       />
       <label
         className="
@@ -27,7 +27,7 @@ export default function Input({ type = "text", name, labelText }: InputProps) {
           peer-focus:scale-[85%] peer-focus:translate-y-0
           transition-transform duration-150
         "
-        htmlFor={name}
+        htmlFor={name + "-input"}
       >
         {labelText}
       </label>
