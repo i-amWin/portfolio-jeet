@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <div className="h-full">
+    <div data-scroll-section className="h-full">
       <div
         className="
           flex flex-col justify-center

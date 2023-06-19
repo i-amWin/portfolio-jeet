@@ -24,7 +24,7 @@ export default function TechStack() {
       name: "JAVASCRIPT",
     },
     {
-      id: 4,
+      id: 5,
       thumbnail: "/assets/tech-img/typescript.png",
       name: "TYPESCRIPT",
     },
@@ -62,7 +62,7 @@ export default function TechStack() {
   ];
 
   return (
-    <div className="bg-accent text-white">
+    <div data-scroll-section className="bg-accent text-white">
       <div className="max-w-screen-lg w-full mx-auto px-4 py-14">
         <h2
           className="

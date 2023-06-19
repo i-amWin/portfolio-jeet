@@ -2,7 +2,7 @@ import Input from "@/components/Input";
 
 export default function Contact() {
   return (
-    <div className="text-white">
+    <div data-scroll-section className="text-white">
       <div className="max-w-screen-lg w-full mx-auto px-4 py-14">
         <h2
           className="

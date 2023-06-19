@@ -1,5 +1,5 @@
-import Navbar from "@/components/Navbar";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 import { Nunito_Sans } from "next/font/google";
 
 const inter = Nunito_Sans({ subsets: ["latin"] });
@@ -20,6 +20,7 @@ export default function RootLayout({
         <header className="fixed top-0 z-50 w-full bg-background border-b-[1px] border-accent">
           <Navbar />
         </header>
+
         <main className="h-full mx-auto overflow-x-hidden">{children}</main>
       </body>
     </html>

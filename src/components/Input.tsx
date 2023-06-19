@@ -1,5 +1,3 @@
-import { useId } from "react";
-
 interface InputProps {
   type?: string;
   name: string;
@@ -7,8 +5,6 @@ interface InputProps {
 }
 
 export default function Input({ type = "text", name, labelText }: InputProps) {
-  const id = useId();
-
   return (
     <div className="flex flex-col relative">
       <input
@@ -19,7 +15,7 @@ export default function Input({ type = "text", name, labelText }: InputProps) {
           appearance-none
         "
         type={type}
-        id={id}
+        id={name}
         name={name}
         placeholder=""
       />
@@ -31,7 +27,7 @@ export default function Input({ type = "text", name, labelText }: InputProps) {
           peer-focus:scale-[85%] peer-focus:translate-y-0
           transition-transform duration-150
         "
-        htmlFor={id}
+        htmlFor={name}
       >
         {labelText}
       </label>

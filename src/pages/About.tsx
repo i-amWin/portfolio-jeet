@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <div className="bg-accent text-white">
+    <div data-scroll-section className="bg-accent text-white">
       <div className="max-w-screen-lg w-full mx-auto px-4 py-14">
         <h2
           className="
