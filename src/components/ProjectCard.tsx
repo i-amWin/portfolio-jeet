@@ -12,8 +12,8 @@ export default function ProjectCard({
   liveDemo,
 }: ProjectsCardProps) {
   return (
-    <Animate animateIn="fadeInUp" duration={0.5} delay={id! * 0.05}>
-      <div className="border-2 border-zinc-800 rounded-lg flex flex-col justify-between">
+    <Animate animateIn="fadeInUp" duration={0.5} rootMargin={-10}>
+      <div className="border-2 border-zinc-800 rounded-lg h-full flex flex-col justify-between">
         <div>
           <div>
             <Image
