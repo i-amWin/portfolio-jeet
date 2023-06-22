@@ -16,30 +16,31 @@ export default function Animate({
   duration = 1,
   delay = 0,
 }: AnimateProps) {
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement>(null);
   const [isIntersecting, setIsIntersecting] = useState(false);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          console.log(entry);
-          if (entry.isIntersecting) {
-            setIsIntersecting(true);
-            observer.disconnect();
-          }
-        });
-      },
-      {
-        rootMargin: `${rootMargin}px`,
-      }
-    );
+    let observer: IntersectionObserver | undefined;
 
-    if (!ref.current) return;
-    observer.observe(ref.current);
+    const handleIntersection = (entries: IntersectionObserverEntry[]) => {
+      if (entries.some((entry) => entry.isIntersecting)) {
+        setIsIntersecting(true);
+        observer?.disconnect();
+      }
+    };
+
+    if (typeof window !== "undefined") {
+      observer = new IntersectionObserver(handleIntersection, {
+        rootMargin: `${rootMargin}px`,
+      });
+
+      if (ref.current) {
+        observer.observe(ref.current);
+      }
+    }
 
     return () => {
-      observer.disconnect();
+      observer?.disconnect();
     };
   }, [rootMargin]);
 

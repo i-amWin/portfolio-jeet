@@ -1,6 +1,5 @@
 import { ProjectsCardProps } from "@/types-interface";
 import Image from "next/image";
-import "animate.css/animate.min.css";
 import Animate from "./Animate";
 
 export default function ProjectCard({
@@ -12,7 +11,7 @@ export default function ProjectCard({
   liveDemo,
 }: ProjectsCardProps) {
   return (
-    <Animate animateIn="fadeInUp" duration={0.5} rootMargin={-10}>
+    <Animate animateIn="fadeInUp" duration={0.5} delay={0.02}>
       <div className="border-2 border-zinc-800 rounded-lg h-full flex flex-col justify-between">
         <div>
           <div>
