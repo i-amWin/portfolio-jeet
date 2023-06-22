@@ -2,7 +2,11 @@ import { Great_Vibes } from "next/font/google";
 import Link from "next/link";
 import SocialLinks from "./SocialLinks";
 
-const greatVibes = Great_Vibes({ subsets: ["latin"], weight: ["400"] });
+const greatVibes = Great_Vibes({
+  subsets: ["latin"],
+  weight: ["400"],
+  preload: true,
+});
 
 export default function Navbar() {
   return (

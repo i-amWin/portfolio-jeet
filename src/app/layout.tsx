@@ -2,7 +2,11 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { Nunito_Sans } from "next/font/google";
 
-const inter = Nunito_Sans({ subsets: ["latin"] });
+const inter = Nunito_Sans({
+  subsets: ["latin"],
+  weight: ["500", "700"],
+  preload: true,
+});
 
 export const metadata = {
   title: "My Portfolio",
