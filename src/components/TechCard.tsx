@@ -2,10 +2,16 @@ import { TechCardProps } from "@/types-interface";
 import Image from "next/image";
 import Animate from "./Animate";
 
-export default function TechCard({ name, thumbnail, id }: TechCardProps) {
+export default function TechCard({
+  name,
+  thumbnail,
+  shadowStyle,
+}: TechCardProps) {
   return (
     <Animate animateIn="fadeInUp" duration={0.5} delay={0.02}>
-      <div className="flex flex-col gap-3 justify-between rounded-lg text-gray-100 p-4 bg-primary-button">
+      <div
+        className={`flex flex-col gap-3 justify-between rounded-lg text-gray-100 p-4 bg-primary-button shadow-md ${shadowStyle}`}
+      >
         <div className="flex justify-center">
           <Image
             src={thumbnail}

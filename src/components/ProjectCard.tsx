@@ -12,7 +12,7 @@ export default function ProjectCard({
 }: ProjectsCardProps) {
   return (
     <Animate animateIn="fadeInUp" duration={0.5} delay={0.02}>
-      <div className="border-2 border-zinc-800 rounded-lg h-full flex flex-col justify-between">
+      <div className="border-2 border-zinc-800 rounded-lg h-full flex flex-col justify-between shadow-md shadow-accent">
         <div>
           <div>
             <Image

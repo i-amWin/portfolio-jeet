@@ -22,7 +22,7 @@ export default function Projects() {
     {
       id: 3,
       title: "Litlines",
-      description: "This is project 3",
+      description: "Search books by some lines of that books.",
       thumbnail: "/assets/project-img/litlines.jpg",
       sourceCode: "https://github.com/i-amWin/litlines",
       liveDemo: "https://litlines.netlify.app",
@@ -51,7 +51,7 @@ export default function Projects() {
         >
           Projects
         </h2>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 px-4 md:px-2">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 px-4 md:px-2">
           {projectCardItems.map((card) => (
             <ProjectCard key={card.id} {...card} />
           ))}

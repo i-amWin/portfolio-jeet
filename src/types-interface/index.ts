@@ -1,5 +1,5 @@
 export type ProjectsCardProps = {
-  id?: number;
+  id: number;
   thumbnail: string;
   title: string;
   description: string;
@@ -8,7 +8,8 @@ export type ProjectsCardProps = {
 };
 
 export type TechCardProps = {
-  id?: number;
+  id: number;
   thumbnail: string;
   name: string;
+  shadowStyle: string;
 };
